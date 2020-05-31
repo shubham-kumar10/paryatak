@@ -7,12 +7,22 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { TourGuideComponent } from './tour-guide/tour-guide.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         LoginComponent,
-        SignUpComponent
+        SignUpComponent,
+        ProfileComponent,
+        HeaderComponent,
+        FooterComponent,
+        WelcomeComponent,
+        TourGuideComponent
     ],
     imports: [
         BrowserModule,
