@@ -1,4 +1,4 @@
-package com.paryatak.authservice;
+package com.cognizant.authservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
