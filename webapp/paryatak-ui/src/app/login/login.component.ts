@@ -12,11 +12,10 @@ export class LoginComponent implements OnInit {
     public loginForm: FormGroup;
     public invalidLogin: boolean;
     public error: string = 'Login Failed';
-    public 
 
     constructor(
         private formBuild: FormBuilder,
-        private authService: AuthenticationService,
+        public authService: AuthenticationService,
         private router: Router,
     ) { }
 
