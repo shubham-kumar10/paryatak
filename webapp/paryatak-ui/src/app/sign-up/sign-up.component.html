@@ -3,8 +3,12 @@
         <div class="card-body p-0">
             <div class="row">
                 <div class="col-lg-5 d-none d-lg-flex">
-                    <div class="flex-grow-1 bg-register-image"
-                        style="background-image: url(&quot;assets/img/dogs/image2.jpeg&quot;);"></div>
+                    <div class="flex-grow-1 near-moon-gradient">
+                        <img *ngIf="!signup.isBussiness" class="card-img-top img-fluid justify-content-center"
+                            src="assets\img\tours\tour-5.png">
+                        <img *ngIf="signup.isBussiness" class="card-img-top img-fluid justify-content-center"
+                            src="assets\img\tours\tour-6.png">
+                    </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="p-5">
@@ -50,22 +54,14 @@
                                 Register Account
                             </button>
                             <hr>
-                            <a class="btn btn-primary btn-block text-white btn-google btn-user" role="button">
-                                <i class="fab fa-google"></i>&nbsp;
-                                Register with Google
-                            </a>
-                            <a class="btn btn-primary btn-block text-white btn-facebook btn-user" role="button">
-                                <i class="fab fa-facebook-f"></i>&nbsp;
-                                Register with Facebook
-                            </a>
-                            <hr>
                         </form>
                         <div class="row">
                             <div class="col-4">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                <a class="small">Forgot Password?</a>
                             </div>
                             <div class="offset-3 col-5">
-                                <a class="small" href="login.html" (click)="navigateToLogin()">Already have an account? Login!</a>
+                                <a class="small" (click)="goToLogin()">Already have an account?
+                                    Login!</a>
                             </div>
                         </div>
                     </div>

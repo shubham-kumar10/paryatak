@@ -11,7 +11,7 @@ import { User } from '../models/user';
 export class SignUpService {
 
     public url: string = environment.baseUrl + "user-service/";
-
+    public isBussiness: boolean;
     constructor(private _httpClient: HttpClient) { }
 
     addUser(user: User): Observable<any> {

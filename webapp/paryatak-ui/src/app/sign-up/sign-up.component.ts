@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { User } from '../models/user';
 import { SignUpService } from '../services/sign-up.service';
@@ -18,7 +18,8 @@ export class SignUpComponent implements OnInit {
 
     constructor(private formBuilder: FormBuilder,
         private signUpService: SignUpService,
-        private router: Router
+        private router: Router,
+        public signup: SignUpService
     ) { }
 
     ngOnInit() {
@@ -80,6 +81,10 @@ export class SignUpComponent implements OnInit {
 
     }
 
+    public goToLogin(): void {
+        this.router.navigate(['login'])
+    }
+
     public addUser(): void {
         console.log(this.signUpForm.value['firstname']);
 
@@ -95,7 +100,7 @@ export class SignUpComponent implements OnInit {
             this.userCreated = true;
             this.error = "Signed Up Successfull.Go to Login Page"
             console.log(this.userCreated)
-            this.router.navigate['/login'];
+            this.router.navigate['login'];
         },
             error => {
                 console.log("error")
